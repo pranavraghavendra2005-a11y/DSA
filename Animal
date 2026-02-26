@@ -1,0 +1,35 @@
+package abstractClass;
+
+abstract class Animal {
+    void eat(){
+        System.out.println(" animal eats something");
+
+    }
+
+    abstract void run();
+
+
+}
+class Cat extends Animal{
+    @Override
+    void run(){
+        System.out.println("cats run fast");
+    }
+
+}
+class Cheetah extends Animal{
+    @Override
+    void run(){
+        System.out.println("cheetah runs very fast");
+    }
+}
+class demo{
+    public static void main(String args[]){
+        Cat cat=new Cat();
+        Cheetah cheetah =new Cheetah();
+        cat.eat();
+        cat.run();
+        cheetah.eat();
+        cheetah.run();
+    }
+}
