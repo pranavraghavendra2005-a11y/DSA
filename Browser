@@ -1,0 +1,36 @@
+package inheritance.mutiple;
+
+public interface Browser {
+    void browser();
+
+}
+interface Browser1{
+    void browser1();
+}
+interface Browser2{
+    void browser2();
+
+
+}
+class Browsers implements Browser,Browser1,Browser2{
+    @Override
+    public void browser(){
+        System.out.println("google chrome");
+
+    }
+    public void browser1(){
+        System.out.println("safari");
+
+    }
+    public void browser2(){
+        System.out.println("mozilla firefox");
+    }
+}
+class demo{
+    public static void main(String[] args) {
+        Browsers browsers=new Browsers();
+        browsers.browser();
+        browsers.browser1();
+        browsers.browser2();
+    }
+}
