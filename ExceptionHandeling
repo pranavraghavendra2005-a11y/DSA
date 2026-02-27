@@ -1,0 +1,29 @@
+package ExceptionHandeling;
+import java.io.IOException;
+/*
+* java.io.Exception ---> FULLY QUALIFY CLASS NAME
+* for check exceptions we alawys use try catch  block
+* throws keyword does not handle exception
+* It only passes on informarion to calling method
+* calling method has to handle exception using try catch
+* throws keyword is written in method signature(name)
+ */
+public class CheckedException {
+	    static void readFile()throws IOException{
+	        throw new IOException("File not found");
+	    }
+
+	    public static void main(String[] args) {
+	        try {
+	            display();
+	        }catch (IOException e){
+	            System.out.println(e);
+	        }
+	    }
+	    static void display() throws IOException{
+	        readFile();
+	    }
+
+	}
+
+
